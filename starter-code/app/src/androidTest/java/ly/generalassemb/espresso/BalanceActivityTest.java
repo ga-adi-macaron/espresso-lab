@@ -52,10 +52,10 @@ public class BalanceActivityTest {
         floatingActionButton.perform(click()); //Clicked on the Fab to move to transaction screen.
 
         ViewInteraction descEditText = onView(withId(R.id.descriptionEditText));//Get description edit text.
-        descEditText.perform(typeText("Payment from MLM suckers"));
+        descEditText.perform(typeText(transactions[0][0]));
 
         ViewInteraction amountEditText = onView(withId(R.id.amountEditText));
-        amountEditText.perform(typeText("12482"));
+        amountEditText.perform(typeText(transactions[0][1]));
 
         onView(withId(R.id.depositButton)).perform(click()); //At this point we should have gone back to mainscreen.
         numOfTransactions++;
@@ -64,8 +64,8 @@ public class BalanceActivityTest {
 
         floatingActionButton.perform(click()); //Go back to the transaction screen
 
-        descEditText.perform(typeText("Gonna try some crack"));
-        amountEditText.perform(typeText("223.42"));
+        descEditText.perform(typeText(transactions[1][0]));
+        amountEditText.perform(typeText(transactions[1][1]));
 
         onView(withId(R.id.withdrawButton)).perform(click()); //Takes us back to balance activity
         numOfTransactions++;
@@ -73,40 +73,40 @@ public class BalanceActivityTest {
         balanceTextView.check(matches(withText("$12,258.58"))); //Check to see if balance properly updated to show withdrawal.
 
         floatingActionButton.perform(click());
-        descEditText.perform(typeText("Crack is pretty good"));
-        amountEditText.perform(typeText("421.30"));
+        descEditText.perform(typeText(transactions[2][0]));
+        amountEditText.perform(typeText(transactions[2][1]));
         onView(withId(R.id.withdrawButton)).perform(click());
         numOfTransactions++;
 
         balanceTextView.check(matches(withText("$11,837.28")));
 
         floatingActionButton.perform(click());
-        descEditText.perform(typeText("Man, I love crack"));
-        amountEditText.perform(typeText("571"));
+        descEditText.perform(typeText(transactions[3][0]));
+        amountEditText.perform(typeText(transactions[3][1]));
         onView(withId(R.id.withdrawButton)).perform(click());
         numOfTransactions++;
 
         balanceTextView.check(matches(withText("$11,266.28")));
 
         floatingActionButton.perform(click());
-        descEditText.perform(typeText("I might be addicted"));
-        amountEditText.perform(typeText("1378"));
+        descEditText.perform(typeText(transactions[4][0]));
+        amountEditText.perform(typeText(transactions[4][1]));
         onView(withId(R.id.withdrawButton)).perform(click());
         numOfTransactions++;
 
         balanceTextView.check(matches(withText("$9,888.28")));
 
         floatingActionButton.perform(click());
-        descEditText.perform(typeText("Just a little more"));
-        amountEditText.perform(typeText("3202"));
+        descEditText.perform(typeText(transactions[5][0]));
+        amountEditText.perform(typeText(transactions[5][1]));
         onView(withId(R.id.withdrawButton)).perform(click());
         numOfTransactions++;
 
         balanceTextView.check(matches(withText("$6,686.28")));
 
         floatingActionButton.perform(click());
-        descEditText.perform(typeText("Senate Paycheck"));
-        amountEditText.perform(typeText("34750"));
+        descEditText.perform(typeText(transactions[6][0]));
+        amountEditText.perform(typeText(transactions[6][1]));
         onView(withId(R.id.depositButton)).perform(click());
         numOfTransactions++;
 
