@@ -46,10 +46,10 @@ public class TransactionAdapter extends BaseAdapter {
         }
 
         TextView amountTextView = (TextView) view.findViewById(R.id.balance_item_amount);
-        TextView descriptiontextView = (TextView) view.findViewById(R.id.balance_item_description);
+        TextView descriptionTextView = (TextView) view.findViewById(R.id.balance_item_description);
 
         amountTextView.setText(transaction.getFormattedAmount());
-        descriptiontextView.setText(transaction.getDescription());
+        descriptionTextView.setText(transaction.getDescription());
 
         if (transaction.getAmount() > 0){
             amountTextView.setTextColor(parent.getResources().getColor(R.color.accent_material_light));
