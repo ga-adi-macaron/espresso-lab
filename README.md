@@ -46,3 +46,9 @@ An app that meets the requirements above.
 
 - [Android Developers - UI Testing](http://developer.android.com/training/testing/ui-testing/espresso-testing.html)
 - [Intro to Espresso](https://androidresearch.wordpress.com/2015/04/04/an-introduction-to-espresso/)
+
+---
+
+## Licensing
+1. All content is licensed under a CC­BY­NC­SA 4.0 license.
+2. All software code is licensed under GNU GPLv3. For commercial use or alternative licensing, please contact [legal@ga.co](mailto:legal@ga.co).
